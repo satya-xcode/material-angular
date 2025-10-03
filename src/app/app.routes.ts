@@ -4,16 +4,20 @@ import { AboutPage } from './pages/about/AboutPage';
 import { ContactPage } from './pages/contact/ContactPage';
 
 export const routes: Routes = [
-    {
-        path:'',
-        component:HomePage
-    },
-    {
-        path:'about',
-        component:AboutPage
-    },
-    {
-        path:'contact',
-        component:ContactPage
-    }
+  {
+    path: '',
+    component: HomePage,
+  },
+  {
+    path: 'about',
+    component: AboutPage,
+  },
+  {
+    path: 'contact',
+    component: ContactPage,
+  },
+  {
+    path: '**',
+    redirectTo: '',
+  },
 ];
