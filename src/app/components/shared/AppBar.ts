@@ -62,16 +62,26 @@ import { CommonModule } from '@angular/common';
           routerLink="/"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
-          (click)="scrollToTop()"
+          (click)="scrollToTop(); mobileMenu.closed.emit()"
         >
           <mat-icon>home</mat-icon>
           <span>Home</span>
         </button>
-        <button mat-menu-item routerLink="/about" routerLinkActive="active">
+        <button
+          mat-menu-item
+          routerLink="/about"
+          routerLinkActive="active"
+          (click)="mobileMenu.closed.emit()"
+        >
           <mat-icon>person</mat-icon>
           <span>About</span>
         </button>
-        <button mat-menu-item routerLink="/contact" routerLinkActive="active">
+        <button
+          mat-menu-item
+          routerLink="/contact"
+          routerLinkActive="active"
+          (click)="mobileMenu.closed.emit()"
+        >
           <mat-icon>contact_mail</mat-icon>
           <span>Contact</span>
         </button>
