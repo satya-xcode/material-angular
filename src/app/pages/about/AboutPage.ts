@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatListModule } from '@angular/material/list';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
+import { DataService } from '../../core/services/data.service';
 
 @Component({
   selector: 'app-about-page',
@@ -196,4 +197,7 @@ import { MatIconModule } from '@angular/material/icon';
     }
   `,
 })
-export class AboutPage {}
+export class AboutPage {
+  // private dataService = inject(DataService);
+  // userData = this.dataService.userData;
+}

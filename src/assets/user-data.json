@@ -1,0 +1,82 @@
+{
+  "name": "Satyendra Rajbhar",
+  "title": "Full Stack Developer | Angular & Node.js Enthusiast",
+  "short_bio": "Building modern web applications with Angular, Node.js, and scalable backend solutions.",
+  "about": "I am a passionate Full Stack Developer with a BCA degree and strong expertise in Angular, Node.js, TypeScript, and modern frontend frameworks. I enjoy building scalable, responsive, and user-friendly web applications. With hands-on experience across the full software development lifecycle, I thrive on turning ideas into working products.",
+  "skills": [
+    "Angular",
+    "TypeScript",
+    "JavaScript",
+    "RxJS",
+    "Angular Material",
+    "Bootstrap",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "REST API",
+    "HTML5",
+    "CSS3",
+    "Git & GitHub"
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "title": "Task Manager App",
+      "description": "A project management tool to create, assign, and track tasks in real-time.",
+      "long_description": "Built with Angular (frontend) and Node.js/Express (backend). It supports authentication, CRUD operations, project categorization, and role-based access.",
+      "tech": ["Angular", "Material", "Node.js", "MongoDB"],
+      "images": ["assets/projects/task-manager.jpg"],
+      "github": "https://github.com/satyendra/task-manager",
+      "demo": "https://task-manager.example.com"
+    },
+    {
+      "id": "proj-2",
+      "title": "E-Commerce Store",
+      "description": "An online shopping platform with cart, checkout, and payment integration.",
+      "long_description": "Developed a full-stack e-commerce store with Angular frontend, Node.js backend, and Razorpay payment gateway integration.",
+      "tech": ["Angular", "Node.js", "MongoDB", "Bootstrap"],
+      "images": ["assets/projects/ecommerce.jpg"],
+      "github": "https://github.com/satyendra/ecommerce-store",
+      "demo": "https://ecommerce-store.example.com"
+    },
+    {
+      "id": "proj-3",
+      "title": "Portfolio Website",
+      "description": "A personal portfolio website showcasing my work and skills.",
+      "long_description": "Designed and developed a responsive portfolio website using Angular and Angular Material with theme toggle support.",
+      "tech": ["Angular", "Angular Material", "TailwindCSS"],
+      "images": ["assets/projects/portfolio.jpg"],
+      "github": "https://github.com/satyendra/portfolio",
+      "demo": "https://portfolio.example.com"
+    },
+    {
+      "id": "proj-4",
+      "title": "Blog Platform",
+      "description": "A blogging platform with markdown support and authentication.",
+      "long_description": "Created a full-stack blogging app where users can write, edit, and publish blogs. Includes JWT-based authentication and comment system.",
+      "tech": ["Angular", "Node.js", "Express", "MongoDB"],
+      "images": ["assets/projects/blog.jpg"],
+      "github": "https://github.com/satyendra/blog-platform",
+      "demo": "https://blog-platform.example.com"
+    },
+    {
+      "id": "proj-5",
+      "title": "Weather App",
+      "description": "A real-time weather forecast app with location-based data.",
+      "long_description": "Developed an Angular PWA that fetches live weather data using OpenWeather API and supports offline caching.",
+      "tech": ["Angular", "PWA", "RxJS", "OpenWeather API"],
+      "images": ["assets/projects/weather.jpg"],
+      "github": "https://github.com/satyendra/weather-app",
+      "demo": "https://weather-app.example.com"
+    }
+  ],
+  "contact": {
+    "email": "satyendra@example.com",
+    "phone": "+91-9876543210"
+  },
+  "social": {
+    "github": "https://github.com/satyendra",
+    "linkedin": "https://linkedin.com/in/satyendra-rajbhar",
+    "twitter": "https://twitter.com/satyendra"
+  }
+}
