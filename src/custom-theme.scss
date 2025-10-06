@@ -4,66 +4,13 @@ html {
   @include mat.theme((
     color: (
       primary: mat.$magenta-palette,
-      tertiary: mat.$violet-palette,
+      tertiary: mat.$violet-palette
     ),
     typography: Roboto,
     density: 0,
   ));
 
-  /* Enhanced Custom Scrollbar */
-  ::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-  }
 
-  ::-webkit-scrollbar-track {
-    background: var(--mat-sys-surface-container);
-    border-radius: 6px;
-    margin: 4px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-      135deg,
-      var(--mat-sys-primary) 0%,
-      var(--mat-sys-tertiary) 100%
-    );
-    border-radius: 6px;
-    border: 2px solid var(--mat-sys-surface-container);
-    min-height: 40px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(
-      135deg,
-      var(--mat-sys-primary-container) 0%,
-      var(--mat-sys-tertiary-container) 100%
-    );
-  }
-
-  ::-webkit-scrollbar-thumb:active {
-    background: linear-gradient(
-      135deg,
-      var(--mat-sys-on-primary-container) 0%,
-      var(--mat-sys-on-tertiary-container) 100%
-    );
-  }
-
-  ::-webkit-scrollbar-corner {
-    background: var(--mat-sys-surface-container);
-  }
-
-  /* For specific elements with custom scroll */
-  .custom-scroll {
-    scrollbar-width: thin;
-    scrollbar-color: var(--mat-sys-primary) var(--mat-sys-surface-container);
-  }
-
-  /* Firefox */
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--mat-sys-primary) var(--mat-sys-surface-container);
-  }
 }
 
 body {

@@ -19,7 +19,11 @@ import { CommonModule } from '@angular/common';
     RouterLinkActive,
   ],
   template: `
-    <mat-toolbar color="primary" class="fixed-toolbar">
+    <mat-toolbar
+      color="primary"
+      class="fixed-toolbar"
+      style="backdrop-filter:10px;background: transparent;"
+    >
       <span class="brand" routerLink="/" (click)="scrollToTop()">{{ portfolioName }}</span>
 
       <span class="spacer"></span>
@@ -98,6 +102,7 @@ import { CommonModule } from '@angular/common';
       left: 0;
       right: 0;
       z-index: 1000;
+    
     }
     
     .spacer {
@@ -119,11 +124,6 @@ import { CommonModule } from '@angular/common';
     .mobile-menu-button {
       display: none;
     }
-    
-    // button[routerLinkActive="active"] {
-    //   background: rgba(240, 165, 165, 0.42);
-    // }
-    
     @media (max-width: 768px) {
       .nav-buttons {
         display: none;

@@ -106,19 +106,8 @@ import { CommonModule } from '@angular/common';
       overflow-y: auto;
       position: relative;
       z-index: 1;
+      /* Add padding to ensure content isn't hidden behind toolbar */
       padding-top: 64px;
-      
-      /* Hide scrollbar for premium look but keep functionality */
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* IE and Edge */
-      
-      /* Smooth scrolling */
-      scroll-behavior: smooth;
-    }
-
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    .main-content::-webkit-scrollbar {
-      display: none;
     }
   
     .active {
@@ -133,14 +122,14 @@ import { CommonModule } from '@angular/common';
       z-index: 2;
       height: 64px;
       
-      /* Enhanced frosted glass effect */
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      /* Frosted glass effect */
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
       
-      /* Premium shadow */
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      /* Optional: Add a slight shadow for better depth */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
     
     .spacer {
@@ -152,12 +141,6 @@ import { CommonModule } from '@angular/common';
       margin-right: 16px;
       cursor: pointer;
       font-size: 1.25rem;
-      color: rgba(0, 0, 0, 0.8);
-      transition: color 0.3s ease;
-    }
-    
-    .brand:hover {
-      color: rgba(0, 0, 0, 1);
     }
     
     .nav-buttons {
@@ -165,42 +148,8 @@ import { CommonModule } from '@angular/common';
       gap: 8px;
     }
     
-    /* Enhanced button styles for premium look */
-    .nav-buttons button {
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .nav-buttons button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-      transition: left 0.5s ease;
-    }
-    
-    .nav-buttons button:hover::before {
-      left: 100%;
-    }
-    
-    .nav-buttons button:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-1px);
-    }
-    
     .mobile-menu-button {
       display: none;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-    }
-    
-    .mobile-menu-button:hover {
-      background: rgba(255, 255, 255, 0.2);
     }
     
     @media (max-width: 768px) {
@@ -212,6 +161,7 @@ import { CommonModule } from '@angular/common';
         display: block;
       }
       
+      /* Adjust padding for mobile if needed */
       .main-content {
         padding-top: 56px;
       }
@@ -221,35 +171,11 @@ import { CommonModule } from '@angular/common';
       }
     }
 
-    /* Enhanced dark theme support */
+    /* Optional: Dark theme support */
     @media (prefers-color-scheme: dark) {
       .frosted-toolbar {
-        background: rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, 0.25);
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      
-      .brand {
-        color: rgba(255, 255, 255, 0.9);
-      }
-      
-      .brand:hover {
-        color: rgba(255, 255, 255, 1);
-      }
-    }
-
-    /* Optional: Add smooth fade-in animation for content */
-    .main-content > * {
-      animation: fadeInUp 0.6s ease-out;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
       }
     }
   `,
@@ -259,9 +185,6 @@ export class App {
   portfolioName = 'My Portfolio';
 
   scrollToTop(): void {
-    const mainContent = document.querySelector('.main-content') as HTMLElement;
-    if (mainContent) {
-      mainContent.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
